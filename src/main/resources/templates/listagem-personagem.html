@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<head>
+<title> listagem </title>
+</head>
+
+<body>
+
+<table class="table table">
+		<thead>
+			<tr>
+				<th scope="col">Codigo</th>
+				<th scope="col">Personagem</th>
+				<th scope="col">Anime</th>
+				<th scope="col">Episodios</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+		<tr th:each = "personagem:${listaPersonagens}">
+		        <td th:text = "${personagem.codigo}"> </td>
+				<td th:text = "${personagem.personagem}"> </td>
+				<td th:text= "${personagem.anime}"> </td>
+				<td th:text= "${personagem.episodios}"> </td>
+				<td> <a class="btn btn-danger" th:href="@{/personagem/excluir/{codigo}(codigo = ${personagem.codigo})}">Excluir</a></td>
+		</tr>
+
+<src="/js/bootstrap.min.js"/> 
+</body>
+</html>
