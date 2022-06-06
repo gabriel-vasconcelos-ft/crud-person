@@ -13,7 +13,7 @@ import com.ifce.br.repository.PersonagemRepository;
 	@Autowired
 	private PersonagemRepository personagemRepo;
 	
-		public void cadastrarFilme(Filme filme) {
+		public void cadastrarPersonagem(Personagem personagem) {
 			personagemRepo.save(personagem);
 		}
 		
